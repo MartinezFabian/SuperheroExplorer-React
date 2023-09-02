@@ -7,5 +7,5 @@ export function getHeroesByPublisher(publisher) {
     throw new Error(`${publisher} is not a valid publisher`);
   }
 
-  heroes.filter((hero) => hero.publisher === publisher);
+  return heroes.filter((hero) => hero.publisher === publisher);
 }
