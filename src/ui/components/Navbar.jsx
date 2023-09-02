@@ -1,7 +1,13 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import styles from './Navbar.module.css';
 
 export const Navbar = () => {
+  const navigate = useNavigate();
+
+  const onLogout = () => {
+    navigate('/login', { replace: true });
+  };
+
   return (
     <nav className={styles.nav}>
       <h1 className={styles.nav__heading}>Superhero Explorer</h1>
@@ -33,7 +39,9 @@ export const Navbar = () => {
         </NavLink>
       </div>
 
-      <button className={styles.nav__btn}>Logout</button>
+      <button onClick={onLogout} className={styles.nav__btn}>
+        Logout
+      </button>
     </nav>
   );
 };

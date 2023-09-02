@@ -1,0 +1,19 @@
+.login {
+  margin-top: 10rem;
+  max-width: 60rem;
+  width: 80%;
+  margin: 10rem auto 0 auto;
+}
+
+.login__btn {
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  background-color: var(--btn-color);
+  border-style: none;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.login__btn:hover {
+  cursor: pointer;
+}
