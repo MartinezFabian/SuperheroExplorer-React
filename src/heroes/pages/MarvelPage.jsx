@@ -1,11 +1,13 @@
 import { HeroesGrid } from '../components/HeroesGrid';
 
+import styles from './MarvelPage.module.css';
+
 export const MarvelPage = () => {
   return (
-    <>
-      <h1>Marvel</h1>
+    <main className={styles.container}>
+      <h1 className={styles.heading}>Marvel</h1>
 
       <HeroesGrid publisher="Marvel Comics"></HeroesGrid>
-    </>
+    </main>
   );
 };

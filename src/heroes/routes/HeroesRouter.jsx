@@ -9,7 +9,9 @@ import { HeroPage } from '../pages/HeroPage';
 export const HeroesRouter = () => {
   return (
     <>
-      <Navbar></Navbar>
+      <header>
+        <Navbar></Navbar>
+      </header>
 
       <Routes>
         <Route path="/marvel" element={<MarvelPage></MarvelPage>} />
