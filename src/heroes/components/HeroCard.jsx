@@ -1,9 +1,10 @@
 import PropTypes from 'prop-types';
 
 import styles from './HeroCard.module.css';
+import { Link } from 'react-router-dom';
 
 export const HeroCard = ({ id, superhero, alter_ego, first_appearance }) => {
-  const heroImg = `./assets/img/${id}.jpg`;
+  const heroImg = `/assets/img/${id}.jpg`;
 
   return (
     <article className={styles.card}>
@@ -15,6 +16,10 @@ export const HeroCard = ({ id, superhero, alter_ego, first_appearance }) => {
         <p className={styles.information__alterego}>{alter_ego}</p>
 
         <p className={styles.information__appearance}>{first_appearance}</p>
+
+        <Link to={`/hero/${id}`} className={styles.link}>
+          Mas...
+        </Link>
       </section>
     </article>
   );

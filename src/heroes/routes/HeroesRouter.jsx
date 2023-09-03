@@ -17,7 +17,7 @@ export const HeroesRouter = () => {
         <Route path="/marvel" element={<MarvelPage></MarvelPage>} />
         <Route path="/dc" element={<DcPage></DcPage>} />
         <Route path="/search" element={<SearchPage></SearchPage>} />
-        <Route path="/hero" element={<HeroPage></HeroPage>} />
+        <Route path="/hero/:id" element={<HeroPage></HeroPage>} />
         <Route path="/404" element={<NotFoundPage></NotFoundPage>} />
         <Route path="/" element={<Navigate to="/marvel" />} /> {/* Redirige desde la ruta raíz */}
         <Route path="/*" element={<Navigate to="/404" />} />
