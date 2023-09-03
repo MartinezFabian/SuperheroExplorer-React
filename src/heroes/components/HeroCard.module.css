@@ -1,0 +1,36 @@
+.card {
+  background-color: var(--item-color);
+  margin-bottom: 6rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: transform 0.08s ease-out;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+@media (min-width: 468px) {
+  .card {
+    margin-bottom: 0;
+  }
+}
+
+.card__image {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  object-fit: cover;
+}
+
+.information {
+  padding: 1rem 3rem;
+}
+
+.information__name {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.information__appearance {
+  color: #bcbcbc;
+}

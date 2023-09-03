@@ -1,18 +1,20 @@
 import PropTypes from 'prop-types';
 
+import styles from './HeroCard.module.css';
+
 export const HeroCard = ({ id, superhero, alter_ego, first_appearance }) => {
   const heroImg = `./assets/img/${id}.jpg`;
 
   return (
-    <article>
-      <section>
-        <img src={heroImg} alt={superhero} />
+    <article className={styles.card}>
+      <section className={styles.card__section}>
+        <img src={heroImg} alt={superhero} className={styles.card__image} />
       </section>
-      <section>
-        <h3>{superhero}</h3>
-        <p>{alter_ego}</p>
+      <section className={styles.information}>
+        <h3 className={styles.information__name}>{superhero}</h3>
+        <p className={styles.information__alterego}>{alter_ego}</p>
 
-        <p>{first_appearance}</p>
+        <p className={styles.information__appearance}>{first_appearance}</p>
       </section>
     </article>
   );
