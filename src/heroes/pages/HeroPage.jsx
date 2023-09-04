@@ -1,9 +1,11 @@
-import { Navigate, useParams } from 'react-router-dom';
+import { Navigate, useNavigate, useParams } from 'react-router-dom';
 import { getHeroById } from '../helpers/getHeroById';
 
 import styles from './HeroPage.module.css';
 
 export const HeroPage = () => {
+  const navigate = useNavigate();
+
   const { id } = useParams();
 
   const hero = getHeroById(id);
@@ -15,6 +17,14 @@ export const HeroPage = () => {
   const { superhero, publisher, alter_ego, first_appearance, characters } = hero;
 
   const heroImg = `/assets/img/${id}.jpg`;
+
+  const onNavigateBack = () => {
+    if (hero.publisher === 'DC Comics') {
+      navigate('/dc');
+    } else if (hero.publisher === 'Marvel Comics') {
+      navigate('/marvel');
+    }
+  };
 
   return (
     <main className={styles.main}>
@@ -42,7 +52,9 @@ export const HeroPage = () => {
           <p>{characters}</p>
         </div>
 
-        <button className={styles.information__btn}>Back</button>
+        <button onClick={onNavigateBack} className={styles.information__btn}>
+          Back
+        </button>
       </section>
     </main>
   );
