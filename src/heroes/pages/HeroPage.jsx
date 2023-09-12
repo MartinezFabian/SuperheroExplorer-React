@@ -2,13 +2,16 @@ import { Navigate, useNavigate, useParams } from 'react-router-dom';
 import { getHeroById } from '../helpers/getHeroById';
 
 import styles from './HeroPage.module.css';
+import { useMemo } from 'react';
 
 export const HeroPage = () => {
   const navigate = useNavigate();
 
   const { id } = useParams();
 
-  const hero = getHeroById(id);
+  /* memorizar el resultado de la función, el resultado se calculará solo cuando el id cambie. Si 
+    el id permanece igual, el valor memorizado se reutilizará */
+  const hero = useMemo(() => getHeroById(id), [id]);
 
   if (!hero) {
     return <Navigate to="/404"></Navigate>;
