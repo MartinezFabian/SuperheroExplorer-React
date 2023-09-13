@@ -1,0 +1,35 @@
+.search {
+  width: 100%;
+  display: flex;
+}
+
+.search__input {
+  background-color: var(--item-color);
+  flex: 3;
+  padding: 1.5rem 2rem;
+  border-radius: 3rem 0 0 3rem;
+  border-color: var(--btn-color);
+  border-style: solid;
+  color: var(--white);
+  font-size: 1.8rem;
+}
+
+.search__input::placeholder {
+  color: var(--white);
+}
+
+.search__btn {
+  background-color: var(--btn-color);
+  flex: 0.5;
+  border-radius: 0 3rem 3rem 0;
+  border-style: none;
+}
+
+.search__btn:hover {
+  cursor: pointer;
+}
+
+.search__icon {
+  width: 2rem;
+  color: var(--white);
+}
