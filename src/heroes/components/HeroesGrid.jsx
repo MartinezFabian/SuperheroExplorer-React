@@ -11,7 +11,7 @@ export const HeroesGrid = ({ publisher }) => {
   const heroes = useMemo(() => getHeroesByPublisher(publisher), [publisher]);
 
   return (
-    <ul className={styles.grid}>
+    <ul className={`${styles.grid} animate__animated animate__fadeIn`}>
       {heroes.map((hero) => (
         <HeroCard key={hero.id} {...hero}></HeroCard>
       ))}

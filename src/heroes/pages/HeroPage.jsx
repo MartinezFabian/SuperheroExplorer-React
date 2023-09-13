@@ -1,8 +1,10 @@
 import { Navigate, useNavigate, useParams } from 'react-router-dom';
-import { getHeroById } from '../helpers/getHeroById';
-
-import styles from './HeroPage.module.css';
 import { useMemo } from 'react';
+
+import 'animate.css';
+
+import { getHeroById } from '../helpers/getHeroById';
+import styles from './HeroPage.module.css';
 
 export const HeroPage = () => {
   const navigate = useNavigate();
@@ -32,7 +34,11 @@ export const HeroPage = () => {
   return (
     <main className={styles.main}>
       <section className={styles.main__section}>
-        <img src={heroImg} alt={superhero} className={styles.main__img} />
+        <img
+          src={heroImg}
+          alt={superhero}
+          className={`${styles.main__img} animate__animated animate__zoomIn animate__slow`}
+        />
       </section>
 
       <section className={styles.information}>
