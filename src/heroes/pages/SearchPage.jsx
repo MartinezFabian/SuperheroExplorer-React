@@ -16,14 +16,29 @@ export const SearchPage = () => {
 
   const heroes = getHeroesByName(q);
 
+  const showMessage = q === '';
+  const showError = heroes.length === 0 && !showMessage;
+
   return (
-    <main>
+    <main className={styles.main}>
       <section className={styles.container}>
         <HeroSearch></HeroSearch>
       </section>
 
       <section className={styles.results}>
-        <div className={styles.results__alert}>The hero is not found</div>
+        <div
+          className={`${styles.results__alert} ${styles['results__alert--info']} animate__animated animate__fadeIn`}
+          style={{ display: showMessage ? '' : 'none' }}
+        >
+          Type the hero name
+        </div>
+
+        <div
+          className={`${styles.results__alert} animate__animated animate__fadeIn`}
+          style={{ display: showError ? '' : 'none' }}
+        >
+          The hero is not found
+        </div>
 
         <ul className={`${styles.results__grid} animate__animated animate__fadeIn`}>
           {heroes.map((hero) => (

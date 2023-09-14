@@ -1,3 +1,7 @@
+.main {
+  margin-top: 16rem;
+}
+
 .container {
   max-width: 50rem;
   width: 90%;
@@ -12,7 +16,7 @@
 }
 
 .results__alert {
-  background-color: var(--alert);
+  background-color: var(--alert-error);
   width: 100%;
   max-width: 50rem;
   margin: 0 auto;
@@ -21,6 +25,10 @@
   font-weight: 700;
   padding: 1.6rem;
   border-radius: 1rem;
+}
+
+.results__alert--info {
+  background-color: var(--alert-message);
 }
 
 .results__grid {

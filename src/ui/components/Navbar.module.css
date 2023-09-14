@@ -1,5 +1,4 @@
 .nav {
-  margin-top: 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,9 +8,15 @@
 
 @media (min-width: 768px) {
   .nav {
-    margin-top: 1rem;
     flex-direction: row;
     border-bottom: solid 1px var(--gray);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: #23272f;
   }
 }
 

@@ -16,11 +16,7 @@ export const HeroSearch = () => {
 
     const searchValue = formState.toLowerCase().trim();
 
-    if (searchValue.length <= 1) return;
-
     navigate(`?q=${searchValue}`);
-
-    setFormState('');
   };
 
   return (

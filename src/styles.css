@@ -5,7 +5,8 @@
   --white: #dfdfdf;
   --gray: #4e493e;
   --btn-color: #0c66ed;
-  --alert: #832525;
+  --alert-error: #832525;
+  --alert-message: #5d8325;
 }
 
 html {
