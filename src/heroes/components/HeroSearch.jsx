@@ -1,20 +1,9 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './HeroSearch.module.css';
-import { useLocation, useNavigate } from 'react-router-dom';
 
 export const HeroSearch = () => {
   const navigate = useNavigate();
-
-  // Obtener el objeto location que representa la ubicación actual de la página
-  const location = useLocation();
-
-  // Crear un objeto 'searchParams' para manejar los parámetros de búsqueda de la URL
-  const searchParams = new URLSearchParams(location.search);
-
-  //Se intenta obtener el valor del parámetro de búsqueda 'q' de la URL
-  const q = searchParams.get('q') ? searchParams.get('q') : '';
-
-  console.log(q);
 
   const [formState, setFormState] = useState('');
 

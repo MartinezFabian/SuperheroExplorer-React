@@ -6,14 +6,34 @@
 
 .results {
   margin-top: 10rem;
+  max-width: 120rem;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .results__alert {
   background-color: var(--alert);
   width: 100%;
+  max-width: 50rem;
+  margin: 0 auto;
   text-align: center;
   font-size: 1.6rem;
   font-weight: 700;
   padding: 1.6rem;
   border-radius: 1rem;
+}
+
+.results__grid {
+  list-style-type: none;
+  margin: 4rem 2rem;
+  padding: 0;
+}
+
+@media (min-width: 468px) {
+  .results__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 34rem);
+    gap: 4rem;
+    justify-content: center;
+  }
 }
