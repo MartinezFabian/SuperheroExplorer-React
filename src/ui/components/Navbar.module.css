@@ -59,3 +59,7 @@
   cursor: pointer;
   color: rgba(255, 255, 255, 0.922);
 }
+
+.nav__username {
+  color: #9dc7ff;
+}

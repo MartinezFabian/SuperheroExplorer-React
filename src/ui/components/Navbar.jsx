@@ -1,8 +1,12 @@
 import { NavLink, useNavigate } from 'react-router-dom';
 import styles from './Navbar.module.css';
+import { useContext } from 'react';
+import { AuthContext } from '../../auth/context/AuthContext';
 
 export const Navbar = () => {
   const navigate = useNavigate();
+
+  const { authState } = useContext(AuthContext);
 
   const onLogout = () => {
     navigate('/login', { replace: true });
@@ -39,9 +43,12 @@ export const Navbar = () => {
         </NavLink>
       </div>
 
-      <button onClick={onLogout} className={styles.nav__btn}>
-        Logout
-      </button>
+      <div className={styles.nav__container}>
+        <p className={styles.nav__username}>{authState?.username}</p>
+        <button onClick={onLogout} className={styles.nav__btn}>
+          Logout
+        </button>
+      </div>
     </nav>
   );
 };
