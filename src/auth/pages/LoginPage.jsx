@@ -45,7 +45,7 @@ export const LoginPage = () => {
 
         <div
           className={`${styles.login__alert} animate__animated animate__fadeIn`}
-          style={{ display: formState.length === 0 ? '' : 'none' }}
+          style={{ display: formState.trim().length === 0 ? '' : 'none' }}
         >
           Type the username...
         </div>
