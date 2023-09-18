@@ -4,7 +4,7 @@ import styles from './HeroCard.module.css';
 import { Link } from 'react-router-dom';
 
 export const HeroCard = ({ id, superhero, alter_ego, first_appearance }) => {
-  const heroImg = `/assets/img/${id}.jpg`;
+  const heroImg = `/img/${id}.jpg`;
 
   return (
     <article className={styles.card}>
