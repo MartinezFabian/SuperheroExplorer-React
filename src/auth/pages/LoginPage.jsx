@@ -22,7 +22,11 @@ export const LoginPage = () => {
 
     login(username);
 
-    navigate('/', { replace: true });
+    const lastPathVisited = localStorage.getItem('lastPathVisited')
+      ? localStorage.getItem('lastPathVisited')
+      : '/';
+
+    navigate(lastPathVisited, { replace: true });
   };
 
   return (
