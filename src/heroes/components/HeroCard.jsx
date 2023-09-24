@@ -18,7 +18,7 @@ export const HeroCard = ({ id, superhero, alter_ego, first_appearance }) => {
         <p className={styles.information__appearance}>{first_appearance}</p>
 
         <Link to={`/hero/${id}`} className={styles.link}>
-          Mas...
+          More...
         </Link>
       </section>
     </article>
