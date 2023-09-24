@@ -30,4 +30,15 @@ describe('tests in SearchPage.jsx', () => {
     const alertNotFound = screen.getByLabelText('alert-not-found');
     expect(alertNotFound.style.display).toBe('none');
   });
+
+  test('must display the alert if it is a non-existent hero', () => {
+    render(
+      <MemoryRouter initialEntries={['/search?q=nonexistenthero']}>
+        <SearchPage></SearchPage>
+      </MemoryRouter>
+    );
+
+    const alertNotFound = screen.getByLabelText('alert-not-found');
+    expect(alertNotFound.style.display).toBe('');
+  });
 });
