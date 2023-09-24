@@ -21,7 +21,7 @@ export const HeroPage = () => {
 
   const { superhero, publisher, alter_ego, first_appearance, characters } = hero;
 
-  const heroImg = `/img/${id}.jpg`;
+  const heroImg = `./img/${id}.jpg`;
 
   const onNavigateBack = () => {
     if (hero.publisher === 'DC Comics') {

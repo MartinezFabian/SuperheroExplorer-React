@@ -44,4 +44,4 @@ The primary purpose of this project is to apply theoretical knowledge related to
 
 ## Online Demo
 
-For a live demonstration of the "Superhero Explorer" project, please visit the following link: [Superhero Explorer Demo]()
+For a live demonstration of the "Superhero Explorer" project, please visit the following link: [Superhero Explorer Demo](https://martinezfabian.github.io/SuperheroExplorer-React/)
