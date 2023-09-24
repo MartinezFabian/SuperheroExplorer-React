@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`tests in SearchPage.jsx must be displayed correctly 1`] = `
+<div>
+  <main
+    class="main"
+  >
+    <section
+      class="container"
+    >
+      <form
+        class="search"
+      >
+        <input
+          autocomplete="off"
+          class="search__input"
+          name="searchInput"
+          placeholder="Search a hero"
+          type="text"
+          value=""
+        />
+        <button
+          class="search__btn"
+          type="submit"
+        >
+          <svg
+            class="search__icon"
+            fill="none"
+            stroke="#dfdfdf"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+      </form>
+    </section>
+    <section
+      class="results"
+    >
+      <div
+        class="results__alert results__alert--info animate__animated animate__fadeIn"
+      >
+        Type the hero name
+      </div>
+      <div
+        aria-label="alert-not-found"
+        class="results__alert animate__animated animate__fadeIn"
+        style="display: none;"
+      >
+        The hero is not found
+      </div>
+      <ul
+        class="results__grid animate__animated animate__fadeIn"
+      />
+    </section>
+  </main>
+</div>
+`;

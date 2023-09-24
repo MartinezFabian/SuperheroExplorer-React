@@ -34,6 +34,7 @@ export const SearchPage = () => {
         </div>
 
         <div
+          aria-label="alert-not-found"
           className={`${styles.results__alert} animate__animated animate__fadeIn`}
           style={{ display: showError ? '' : 'none' }}
         >
